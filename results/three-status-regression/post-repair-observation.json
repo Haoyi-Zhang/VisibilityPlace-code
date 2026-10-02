@@ -1,0 +1,6 @@
+{
+  "executed": true,
+  "accepted": false,
+  "reason": "declared optimal status has no realizable path",
+  "note": "Observation from executing the same exact model and certificate against the repaired checker."
+}

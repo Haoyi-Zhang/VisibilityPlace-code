@@ -1,0 +1,28 @@
+{
+  "all_bruteforce_classifications_complete": true,
+  "all_case_ids_unique": true,
+  "all_compilers_equal": true,
+  "all_models_valid": true,
+  "all_semantics_equal": true,
+  "expected_cases": 13720,
+  "max_compiled_edges": 21,
+  "max_compiled_nodes": 17,
+  "max_realizations": 5,
+  "schema": "vcm-exhaustive-summary-1",
+  "status_counts": {
+    "infeasible": 8500,
+    "optimal": 1640,
+    "vacuous": 3580
+  },
+  "total_cases": 13720,
+  "universe": {
+    "edge_options_per_slot": 7,
+    "failure_budgets": "all integers from zero through monitor count",
+    "forward_edge_slots": 3,
+    "initial_restriction_values": 2,
+    "monitor_choice": "zero or one export monitor at each vertex; costs 1,2,3",
+    "source": 0,
+    "target": 2,
+    "vertices": 3
+  }
+}

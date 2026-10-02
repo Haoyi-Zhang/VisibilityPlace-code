@@ -1,0 +1,64 @@
+# Clean standalone reproduction
+
+Date: 2026-09-26
+Repository root: visibility-complete-monitor/
+Execution: one local worker; every replay output directory absent before launch
+Current replay environment: Linux 6.18.44 x86-64, glibc 2.41; CPython 3.13.5; NumPy 2.3.5; SciPy 1.17.0 with bundled HiGHS 1.8.0; NetworkX 3.6.1
+
+The historical retained campaign did not preserve recoverable interpreter or dependency versions. The environment above is the actually queried environment for this repair replay; it is not retroactively attributed to the historical run.
+
+## Commands and observed outputs
+
+$ python3 test.py
+Ran 24 tests in 2.214s
+OK
+{"errors": 0, "failures": 0, "passed": true, "peak_rss_kib": 180916, "tests": 24, "wall_seconds": 2.566501312000014}
+External resource wrapper: elapsed 3.29 s; max RSS 180916 KiB; exit status 0.
+
+The 24 tests include the two opposite status forgeries, exact monitor-cost and certificate-integer endpoints plus first-over-bound rejection, current-input revalidation without snapshot binding, compiler equality, direct semantics, brute-force optima, retained certificate acceptance, malformed sparse objects, and checker-only execution with site packages disabled.
+
+$ python3 exhaustive.py --out replay-exhaustive
+{"all_bruteforce_classifications_complete": true, "all_case_ids_unique": true, "all_compilers_equal": true, "all_models_valid": true, "all_semantics_equal": true, "expected_cases": 13720, "max_compiled_edges": 21, "max_compiled_nodes": 17, "max_realizations": 5, "peak_rss_kib": 103336, "status_counts": {"infeasible": 8500, "optimal": 1640, "vacuous": 3580}, "total_cases": 13720, "wall_seconds": 1.240419265000014, "workers": 1}
+External resource wrapper: elapsed 1.85 s; max RSS 103336 KiB; exit status 0.
+
+$ python3 fuzz.py --out replay-fuzz
+{"all_bruteforce_status_and_cost_equal": true, "all_certificates_accepted": true, "all_compilers_equal": true, "all_semantics_equal": true, "max_realizations": 16, "peak_rss_kib": 132780, "random_cases": 192, "seed": 20260918, "status_counts": {"infeasible": 104, "optimal": 25, "vacuous": 71}, "targeted_cases": 8, "total_cases": 200, "wall_seconds": 0.12083273600001121}
+External resource wrapper: elapsed 1.14 s; max RSS 133036 KiB; exit status 0.
+
+$ python3 run.py pilot --out replay-pilot
+{"cases": 7, "controls_rejected": 21, "degree_worse": 4, "exact_oracle_cases": 3, "greedy_worse": 3, "infeasible": 1, "max_compiled_edges": 4007, "max_compiled_nodes": 2033, "optimal": 5, "vacuous": 1}
+External resource wrapper: elapsed 1.82 s; max RSS 331992 KiB; exit status 0.
+
+$ python3 run.py reproduce --out replay
+{"cases": 120, "controls_rejected": 21, "degree_worse": 78, "exact_oracle_cases": 44, "greedy_worse": 58, "infeasible": 12, "max_certificate_bytes": 16711, "max_compiled_edges": 4017, "max_compiled_nodes": 2033, "max_horizon": 14, "max_monitors": 31, "max_physical_edges": 1428, "max_physical_nodes": 500, "optimal": 96, "vacuous": 12}
+External resource wrapper: elapsed 7.03 s; max RSS 409924 KiB; exit status 0.
+
+$ python3 run.py compare --observed replay --mode semantic
+semantic fields and certified statuses/costs match; observed certificates were revalidated; floating diagnostics and witness identity excluded
+
+$ python3 run.py compare --observed replay --mode strict
+strict fixed-environment objects match: non-runtime rows, controls, and all 120 certificate objects
+
+$ python3 analyze.py --results replay --out replay-derived
+derived tables and plot data from 120 case rows
+
+$ python3 audit.py --campaign replay --derived replay-derived --fuzz replay-fuzz --exhaustive replay-exhaustive --mode semantic
+{"accepted": true, "bounded_exhaustive_cases": 13720, "campaign_certificates": 120, "claim_rows": 25, "comparison_mode": "semantic", "derived_files": 7, "differential_cases": 200, "external_resource_rows": 27, "reference_rows": 58}
+
+$ python3 audit.py --campaign replay --derived replay-derived --fuzz replay-fuzz --exhaustive replay-exhaustive --mode strict
+{"accepted": true, "bounded_exhaustive_cases": 13720, "campaign_certificates": 120, "claim_rows": 25, "comparison_mode": "strict", "derived_files": 8, "differential_cases": 200, "external_resource_rows": 27, "reference_rows": 58}
+
+$ python3 -S run.py check --model inputs/example-model.json --certificate inputs/example-certificate.json
+{"accepted": true, "compiled_edges": 49, "compiled_nodes": 45, "cost": 12, "dual_value": 12, "status": "optimal"}
+
+## Three-status regression
+
+The exact `Empty` false-optimal object supplied for the repair was executed against the pre-repair checker and was accepted because the zero-flow and potential arithmetic did not independently require sink reachability. The repaired checker rejects that same object with:
+
+    declared optimal status has no realizable path
+
+The opposite forged declaration, `vacuous` on a reachable retained case, is also rejected. Both directions are included among the 21 controls and 24 tests.
+
+## Result and interpretation
+
+All commands above completed with exit status 0 in the recorded current environment. Strict comparison replicated the retained proof objects and floating diagnostics, excluding producer/checker milliseconds. Semantic comparison regenerated checker-valid objects with the retained statuses and certified optimum costs while permitting a different valid witness or floating diagnostic. Neither mode establishes correctness outside the admitted finite model or compatibility with every future dependency release.

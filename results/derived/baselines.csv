@@ -1,0 +1,4 @@
+family,cases,greedy_worse,greedy_max,degree_worse,degree_max
+Tiny,36,32,2.86,34,5.57
+Layered,48,14,1.90,44,9.28
+Fan,12,12,2.50,0,1.00

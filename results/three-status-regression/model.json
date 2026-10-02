@@ -1,0 +1,10 @@
+{
+  "case": "Empty",
+  "family": "Boundary",
+  "nodes": 2,
+  "edges": [],
+  "monitors": [],
+  "obligation": [0, 1, 0],
+  "horizon": 0,
+  "failures": 0
+}

@@ -1,0 +1,13 @@
+{
+  "executed": true,
+  "accepted": true,
+  "result": {
+    "accepted": true,
+    "compiled_edges": 7,
+    "compiled_nodes": 10,
+    "cost": 0,
+    "dual_value": 0,
+    "status": "optimal"
+  },
+  "note": "Observation from executing the exact model and certificate against the inherited pre-repair checker. The current checker intentionally does not reproduce this acceptance."
+}

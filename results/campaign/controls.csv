@@ -1,0 +1,22 @@
+control,outcome,reason
+remove-selected,rejected,local potential inequality failed
+wrong-primal-cost,rejected,placement cost mismatch
+nonzero-source-potential,rejected,potential endpoints do not certify k coverage
+low-sink-potential,rejected,potential endpoints do not certify k coverage
+short-potential,rejected,bad potential length
+wrong-flow-value,rejected,flow conservation failed
+flow-conservation,rejected,flow conservation failed
+unsorted-flow,rejected,flow entries must be strictly edge-sorted
+duplicate-flow-edge,rejected,flow entries must be strictly edge-sorted
+missing-overflow,rejected,dual monitor capacity inequality failed
+wrong-dual-objective,rejected,primal and dual objectives do not match
+unknown-monitor,rejected,bad selected monitor list
+unsorted-selected,rejected,selected monitors must be sorted and unique
+reachable-false-vacuity,rejected,declared vacuity has a realizable path
+unreachable-false-optimal,rejected,declared optimal status has no realizable path
+truncated-infeasible-witness,rejected,witness does not reach the sink
+wrong-witness-count,rejected,witness does not prove infeasibility
+nonzero-vacuous-cost,rejected,vacuous cost must be the integer zero
+unexpected-field,rejected,unexpected certificate fields
+local-hook-outside-class,rejected,the certified class permits positive-cost export hooks only
+cyclic-physical-model,rejected,physical graph must be acyclic

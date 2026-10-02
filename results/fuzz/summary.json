@@ -1,0 +1,20 @@
+{
+  "all_bruteforce_status_and_cost_equal": true,
+  "all_certificates_accepted": true,
+  "all_compilers_equal": true,
+  "all_semantics_equal": true,
+  "cpu_seconds": 0.18598965899999986,
+  "max_realizations": 16,
+  "peak_rss_kib": 132784,
+  "random_cases": 192,
+  "schema": "vcm-fuzz-summary-1",
+  "seed": 20260918,
+  "status_counts": {
+    "infeasible": 104,
+    "optimal": 25,
+    "vacuous": 71
+  },
+  "targeted_cases": 8,
+  "total_cases": 200,
+  "wall_seconds": 0.1709072040000592
+}

@@ -1,0 +1,82 @@
+{
+  "baselines": [
+    {
+      "cases": 36,
+      "degree_max": "5.57",
+      "degree_worse": 34,
+      "family": "Tiny",
+      "greedy_max": "2.86",
+      "greedy_worse": 32
+    },
+    {
+      "cases": 48,
+      "degree_max": "9.28",
+      "degree_worse": 44,
+      "family": "Layered",
+      "greedy_max": "1.90",
+      "greedy_worse": 14
+    },
+    {
+      "cases": 12,
+      "degree_max": "1.00",
+      "degree_worse": 0,
+      "family": "Fan",
+      "greedy_max": "2.50",
+      "greedy_worse": 12
+    }
+  ],
+  "claim_scope": "owned synthetic acyclic export-only policy models; no deployed BGP claim",
+  "families": [
+    {
+      "cases": 36,
+      "family": "Tiny",
+      "infeasible": 0,
+      "max_edges": 21,
+      "max_monitors": 10,
+      "max_nodes": 15,
+      "optimal": 36,
+      "vacuous": 0
+    },
+    {
+      "cases": 48,
+      "family": "Layered",
+      "infeasible": 0,
+      "max_edges": 1428,
+      "max_monitors": 31,
+      "max_nodes": 500,
+      "optimal": 48,
+      "vacuous": 0
+    },
+    {
+      "cases": 12,
+      "family": "Fan",
+      "infeasible": 0,
+      "max_edges": 31,
+      "max_monitors": 16,
+      "max_nodes": 18,
+      "optimal": 12,
+      "vacuous": 0
+    },
+    {
+      "cases": 12,
+      "family": "Infeasible",
+      "infeasible": 12,
+      "max_edges": 9,
+      "max_monitors": 4,
+      "max_nodes": 10,
+      "optimal": 0,
+      "vacuous": 0
+    },
+    {
+      "cases": 12,
+      "family": "Vacuous",
+      "infeasible": 0,
+      "max_edges": 7,
+      "max_monitors": 6,
+      "max_nodes": 8,
+      "optimal": 0,
+      "vacuous": 12
+    }
+  ],
+  "timing_note": "single-environment descriptive measurements; correctness does not depend on timing"
+}

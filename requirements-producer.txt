@@ -1,0 +1,5 @@
+# Exact producer/test environment used for the current repair replay.
+# The checker-only path uses the Python standard library.
+numpy==2.3.5
+scipy==1.17.0
+networkx==3.6.1

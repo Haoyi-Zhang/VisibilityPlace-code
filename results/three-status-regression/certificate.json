@@ -1,0 +1,13 @@
+{
+  "schema": "vcm-certificate-1",
+  "case": "Empty",
+  "status": "optimal",
+  "k": 1,
+  "selected": [],
+  "cost": 0,
+  "potential": [0, 1, 0, 0, 1, 1, 1, 1, 1, 1],
+  "flow_value": 0,
+  "flow": [],
+  "overflow": [],
+  "dual_value": 0
+}

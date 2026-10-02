@@ -1,0 +1,21 @@
+{
+  "all_monitor_count": 1,
+  "case": "I000",
+  "k": 2,
+  "schema": "vcm-certificate-1",
+  "status": "infeasible",
+  "witness": [
+    "e00011",
+    "e00000",
+    "e00014",
+    "e00002",
+    "e00003",
+    "e00016",
+    "e00005",
+    "e00018",
+    "e00007",
+    "e00020",
+    "e00009",
+    "e00012"
+  ]
+}

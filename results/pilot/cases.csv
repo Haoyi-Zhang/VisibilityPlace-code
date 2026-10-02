@@ -1,0 +1,8 @@
+case,family,status,nodes,physical_edges,monitors,horizon,failures,k,compiled_nodes,compiled_edges,selected,optimal_cost,dual_value,flow_value,overflow,all_monitor_count,lp_objective,rounding_alpha,greedy_cost,degree_cost,producer_ms,checker_ms,certificate_bytes,exact_oracle,accepted
+T000,Tiny,optimal,9,12,7,4,0,1,45,49,1,12,12,12,0,,12.000000000,0.500000000,12,18,5.503857,0.214038,1070,yes,yes
+T001,Tiny,optimal,8,8,6,5,1,2,40,42,2,30,30,16,2,,30.000000000,0.500000000,42,52,3.439454,0.154048,1595,yes,yes
+L012,Layered,optimal,500,1428,31,14,0,1,2033,4007,1,22,22,22,0,,22.000000000,0.500000000,22,27,812.028329,9.950184,15670,no,yes
+L037,Layered,optimal,400,1123,25,13,1,2,1627,3147,2,32,32,21,10,,32.000000000,0.500000000,41,297,299.570838,8.188009,12830,no,yes
+F007,Fan,optimal,14,23,12,3,0,1,70,89,1,5,5,5,0,,5.000000000,0.500000000,11,5,7.422434,0.337191,1709,yes,yes
+I000,Infeasible,infeasible,5,4,1,4,1,2,23,22,0,,,,,1,,,,,0.079398,0.069944,303,no,yes
+V000,Vacuous,vacuous,4,3,3,3,0,1,21,19,0,0,,,,,,,,,0.043154,0.076984,100,no,yes

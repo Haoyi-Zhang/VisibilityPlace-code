@@ -1,0 +1,18 @@
+{
+  "cases": 7,
+  "claim_scope": "owned synthetic acyclic export-only policy models; no deployed BGP claim",
+  "controls_rejected": 21,
+  "degree_worse": 4,
+  "exact_oracle_cases": 3,
+  "greedy_worse": 3,
+  "infeasible": 1,
+  "max_certificate_bytes": 15670,
+  "max_compiled_edges": 4007,
+  "max_compiled_nodes": 2033,
+  "max_horizon": 14,
+  "max_monitors": 31,
+  "max_physical_edges": 1428,
+  "max_physical_nodes": 500,
+  "optimal": 5,
+  "vacuous": 1
+}

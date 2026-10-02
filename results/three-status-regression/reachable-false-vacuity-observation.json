@@ -1,0 +1,6 @@
+{
+  "executed": true,
+  "accepted": false,
+  "reason": "declared vacuity has a realizable path",
+  "note": "The opposite forged status uses a vacuous certificate on retained reachable case T000; the executable control remains in src/controls.py."
+}
