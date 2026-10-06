@@ -109,7 +109,7 @@ def verify(model, certificate):
         if not isinstance(item, list) or len(item) != 2:
             raise Rejected("flow entry requires [edge,value]")
         edge_id, value = item
-        if edge_id not in y or not _integer(value, 1):
+        if not isinstance(edge_id, str) or edge_id not in y or not _integer(value, 1):
             raise Rejected("bad positive flow entry")
         if last is not None and edge_id <= last:
             raise Rejected("flow entries must be strictly edge-sorted")

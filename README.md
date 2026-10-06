@@ -1,6 +1,6 @@
 # visibility-complete-monitor
 
-This standalone repository produces and checks proof-carrying minimum-cost monitor placements for one explicitly bounded class of owned synthetic export-policy graphs. It accompanies an internal research manuscript; it is not a BGP implementation, a live-network study, or a deployment recommendation.
+This standalone repository produces and checks proof-carrying minimum-cost monitor placements for one explicitly bounded class of owned synthetic export-policy graphs. It accompanies the manuscript *Proof-Carrying Visibility Placement for Acyclic Export Policies*; it is not a BGP implementation, a live-network study, or a deployment recommendation.
 
 ## Scope
 
@@ -28,7 +28,7 @@ The mathematical statements are for finite admitted instances. The implementatio
 
 The retained historical campaign did not preserve recoverable interpreter or dependency versions. Its proof objects and recorded measurements are retained, but no missing version fingerprint is invented.
 
-The repair and replay documented in `docs/environment.md` actually used:
+The earlier Linux repair and replay recorded in `docs/environment.md` used:
 
 * Linux 6.18.44 x86-64, glibc 2.41;
 * CPython 3.13.5 and pip 25.1.1;
@@ -47,7 +47,7 @@ python -m pip install -r requirements-producer.txt
 
 `test.py`, `fuzz.py`, campaign production, and the exact-oracle tests require the producer dependencies because they call the solver. `run.py check`, certificate comparison, and `audit.py` are standard-library-only after their inputs exist. The final `python3 -S` command below demonstrates the checker-only path with site packages disabled.
 
-The campaign launcher uses one worker, a 3 GiB address-space cap, and a 2700-second CPU cap.
+The Linux campaign launcher uses one worker, a 3 GiB address-space cap, and a 2700-second CPU cap. It requires the Unix `resource` module. The standard-library checker can be called directly on other hosts, but the campaign launchers are not Windows-compatible.
 
 ## Clean reproduction
 
@@ -83,11 +83,17 @@ Neither mode is a claim about all future dependency releases. A strict match is 
 * 120-model deterministic campaign: 96 optimal, 12 infeasible, and 12 vacuous certificates.
 * 44 campaign cases with direct-semantics / compiled-path / brute-force oracle agreement.
 * 21 malformed or out-of-class controls, including both a reachable false-vacuity declaration and the exact unreachable false-optimal candidate, all rejected.
-* 24 contract tests, including the complete three-vertex universe check, both status-direction regressions, executable integer/cost bounds, current-input revalidation, strict type and sparse-bound checks, and a checker-only `python3 -S` subprocess.
+* The original 24 contract tests, including the complete three-vertex universe check, both status-direction regressions, executable integer/cost bounds, current-input revalidation, strict type and sparse-bound checks, and a checker-only `python3 -S` subprocess; five added solver-free input/encoding tests bring the suite to 29 tests.
 * A complete 13,720-model three-vertex universe: all forward-edge absence/policy choices, one-or-zero monitors per vertex, both initial restriction states, and every legal failure budget; compiler, path semantics, and brute-force classification agree on every case.
 * 200 fixed-seed differential small models: 192 generated and 8 targeted; compiler, path semantics, brute-force optimum/status, and certificate acceptance agree on every case.
 
 These finite checks are implementation evidence. They are not a proof of the general theorem, a representative Internet sample, or a portable performance claim.
+
+The separate Windows Python 3.12.14 checks accept the 120 retained certificates, reject the 21 controls, and recheck the 44 campaign oracles, 13,720-model universe, and 200 models' compilation/semantics/subset classifications. All five added tests pass. All eight derived files regenerated from retained rows are byte-identical after explicit LF writing. This run did not generate producer certificates or run the original Linux test launcher: SciPy, NetworkX, and `resource` were unavailable. Historical resource observations remain separate.
+
+Input decoding rejects duplicate JSON fields at every object depth and non-JSON numeric constants. Generated JSON and TeX use explicit LF endings, preserving certificate-byte accounting and derived-data comparisons across host newline conventions.
+
+`.github/workflows/scientific-checks.yml` prepares the full finite schedule for the flat standalone repository on Ubuntu 24.04 with Python 3.13.5 and pinned producer libraries. The scientific schedule has a 15-minute wall bound; raw logs and outputs are uploaded even on failure. Both semantic and strict gates remain enabled. This workflow has not been remotely executed by the local checks described above.
 
 ## Repository map
 

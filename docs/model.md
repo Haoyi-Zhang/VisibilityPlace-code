@@ -14,7 +14,7 @@ A model is a JSON object with exactly these fields:
 | `horizon` | upper bound on physical DAG path length | 0--16 and not below the actual longest path |
 | `failures` | arbitrary selected-component losses tolerated | 0--number of monitors |
 
-The physical graph must be acyclic. JSON booleans are rejected in integer fields even though Python treats booleans as integer subclasses. The certified class rejects local hooks, repeated physical edge pairs, cycles, and undeclared fields. These numerical limits are implementation/resource limits; the mathematical arguments are stated for finite instances satisfying the structural assumptions.
+The physical graph must be acyclic. JSON booleans are rejected in integer fields even though Python treats booleans as integer subclasses. Decoding rejects duplicate object keys at every depth and non-JSON numeric constants. Policy actions and flow edge identifiers must be strings before lookup. The certified class rejects local hooks, repeated physical edge pairs, cycles, and undeclared fields. These numerical limits are implementation/resource limits; the mathematical arguments are stated for finite instances satisfying the structural assumptions.
 
 `case` is a plain identifier. It is compared between a model and certificate, but it is not a cryptographic or canonical digest of model contents.
 

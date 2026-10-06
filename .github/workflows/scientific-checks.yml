@@ -1,0 +1,72 @@
+name: Scientific checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  owned-finite-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Initialize raw output
+        run: mkdir -p scientific-output/logs
+      - name: Install pinned producer libraries
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM --kill-after=15s 4m \
+            python -B -m pip install --disable-pip-version-check \
+            -r requirements-producer.txt > scientific-output/logs/dependencies.log 2>&1
+      - name: Run the bounded owned-input schedule
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM --kill-after=15s 15m bash -euo pipefail <<'CHECKS'
+          ulimit -v 3145728
+          ulimit -t 2700
+          run_check() {
+            local name="$1"
+            shift
+            "$@" > "scientific-output/logs/${name}.log" 2>&1
+          }
+          run_check environment python -B -c 'import platform,sys,numpy,scipy,networkx; print(platform.platform()); print(sys.version); print(numpy.__version__,scipy.__version__,networkx.__version__)'
+          run_check materials python -B .github/scripts/check_repository.py
+          run_check tests python -B test.py
+          run_check exhaustive python -B exhaustive.py --out scientific-output/exhaustive
+          run_check differential python -B fuzz.py --out scientific-output/differential
+          run_check pilot python -B run.py pilot --out scientific-output/pilot
+          run_check campaign python -B run.py reproduce --out scientific-output/campaign
+          run_check semantic-compare python -B run.py compare --observed scientific-output/campaign --mode semantic
+          run_check strict-compare python -B run.py compare --observed scientific-output/campaign --mode strict
+          run_check derived python -B analyze.py --results scientific-output/campaign --out scientific-output/derived
+          run_check semantic-audit python -B audit.py --campaign scientific-output/campaign --derived scientific-output/derived --fuzz scientific-output/differential --exhaustive scientific-output/exhaustive --mode semantic
+          run_check strict-audit python -B audit.py --campaign scientific-output/campaign --derived scientific-output/derived --fuzz scientific-output/differential --exhaustive scientific-output/exhaustive --mode strict
+          run_check checker-only python -B -S run.py check --model inputs/example-model.json --certificate inputs/example-certificate.json
+          CHECKS
+      - name: Retain raw output even on a failed gate
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: owned-finite-raw-output
+          path: scientific-output/
+          if-no-files-found: warn
+          retention-days: 14

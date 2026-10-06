@@ -6,9 +6,9 @@ The retained 120-case campaign preserved its model inputs, certificate objects, 
 
 Historical retained resource observations are approximately 7.51 wall seconds, 7.51 campaign CPU seconds, and 410,016 KiB peak process RSS. They are descriptive for that run only.
 
-## Current repair/replay environment
+## Earlier Linux repair/replay environment
 
-The following values were queried directly in the environment used for the current repair and replay:
+The supplied record reports the following values for the earlier Linux repair and replay. They are not measurements of the Windows host used for the separate standard-library checks:
 
 | Component | Observed value |
 |---|---|
@@ -71,4 +71,12 @@ python3 run.py reproduce --out ...
 
 A strict comparison in the pinned environment compares exact certificate objects and the floating producer diagnostics `lp_objective` and `rounding_alpha`, excluding run-local producer/checker milliseconds. It is the repository's fixed-environment object-replication contract, not a guarantee across arbitrary BLAS, solver, Python, or dependency releases.
 
-A semantic comparison validates each new certificate against the current model and compares the status and certified optimum together with deterministic model/baseline fields. It excludes floating producer diagnostics and witness identity. Semantic replay is therefore the portable validity contract when a solver may choose a different but equally valid witness.
+A semantic comparison validates each new certificate against the current model and compares the status and certified optimum together with deterministic model/baseline fields. It excludes floating producer diagnostics and witness identity. It permits a different valid solver witness, but still requires a supported producer platform and valid newly generated inputs.
+
+## Separate Windows standard-library checks
+
+The bundled runtime used on 2026-10-06 was CPython 3.12.14 on Windows 11 build 28000. NumPy 2.3.5 was present; SciPy, NetworkX, and the Unix `resource` module were absent. No dependency was installed and no producer solve was run on this host.
+
+The owned standard-library checks validate 120 retained certificates and 21 controls, cross-check 44 campaign oracle cases, completely recheck the declared 13,720-model universe, and recheck compilation/direct semantics/subset classification on the 200 small models. Five new input/encoding regressions pass. Regeneration of all eight derived files from retained campaign rows matches byte-for-byte after explicit LF output. These are local checks, not CI or a fresh strict producer replay. The run does not replace the historical timing/RSS record.
+
+The standalone full campaign remains Linux-targeted. Its prepared Ubuntu 24.04 workflow uses Python 3.13.5 and the pinned packages above, bounds the whole scientific schedule to 15 wall minutes, and uploads partial raw outputs even when a gate fails. Workflow execution and Linux producer validation remain separate obligations.

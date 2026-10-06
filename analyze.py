@@ -29,7 +29,7 @@ def tex_table(path, column_spec, header, body, footer=None):
     if footer is not None:
         lines.extend([r"\midrule", footer + r"\\"])
     lines.extend([r"\bottomrule", r"\end{tabular}"])
-    Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def main():
@@ -130,7 +130,7 @@ def main():
     }
     (args.out / "summary-macros.tex").write_text(
         "".join("\\newcommand{\\%s}{%s}\n" % item for item in macros.items()),
-        encoding="utf-8",
+        encoding="utf-8", newline="\n",
     )
     analysis = {
         "families": family_rows,
@@ -138,7 +138,10 @@ def main():
         "claim_scope": summary["claim_scope"],
         "timing_note": "single-environment descriptive measurements; correctness does not depend on timing",
     }
-    (args.out / "analysis.json").write_text(json.dumps(analysis, indent=2, sort_keys=True) + "\n")
+    (args.out / "analysis.json").write_text(
+        json.dumps(analysis, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8", newline="\n",
+    )
     if args.paper_data:
         args.paper_data.mkdir(parents=True, exist_ok=True)
         for name in ("families.tex", "baselines.tex", "scaling.csv", "fan.csv", "summary-macros.tex"):

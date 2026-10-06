@@ -95,7 +95,10 @@ def main():
             writer = csv.DictWriter(handle, fieldnames=list(rows[0]) if rows else ["case"])
             writer.writeheader()
             writer.writerows(rows)
-        (args.out / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        (args.out / "summary.json").write_text(
+            json.dumps(summary, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8", newline="\n",
+        )
     print(json.dumps(summary, sort_keys=True))
 
 

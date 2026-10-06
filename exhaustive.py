@@ -117,10 +117,10 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
     (args.out / "summary.json").write_text(
-        json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
     (args.out / "resources.json").write_text(
-        json.dumps(resources, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        json.dumps(resources, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
     print(json.dumps({**summary, **resources}, sort_keys=True))
 

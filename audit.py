@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from checker import verify
 from instances import all_cases
+from io_utils import load_json
 
 STRICT_IGNORED_FIELDS = {"producer_ms", "checker_ms"}
 FUZZ_TIMING_FIELDS = {"wall_seconds", "cpu_seconds", "peak_rss_kib"}
@@ -28,10 +29,6 @@ SEMANTIC_CASE_FIELDS = (
     "optimal_cost", "all_monitor_count", "greedy_cost", "degree_cost",
     "exact_oracle", "accepted",
 )
-
-
-def load_json(path: Path):
-    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def csv_rows(path: Path, ignored=frozenset()):

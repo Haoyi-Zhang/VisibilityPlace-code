@@ -102,7 +102,7 @@ Aggregating `y_e = sum_{P containing e} w_P` gives a nonnegative source--sink fl
 
 ## Proposition 4: certificate size and checking complexity
 
-For compiled graph `(W,A)`, an optimal certificate stores `|W|` potentials, at most `|A|` positive flow entries, at most `|M|` positive overflow entries, and a selected list. It has `O(|W|+|A|+|M|)` entries. With producer return flow at most `C=sum c_m`, numeric values require logarithmic bits in `C+k` beyond identifiers.
+For compiled graph `(W,A)`, an optimal certificate stores `|W|` potentials, at most `|A|` positive flow entries, at most `|M|` positive overflow entries, and a selected list. It has `O(|W|+|A|+|M|)` entries. An optimal circulation with return flow at most `C=sum c_m` exists. The implementation does not minimize return flow among tied optima: its return capacity only guarantees `F<=C+1`. Numeric values still require logarithmic bits in `C+k+1` beyond identifiers.
 
 The implemented checker constructs adjacency lists in input order, uses queue-based topological scans, performs reachability by one graph traversal, verifies the selected list by adjacent comparisons, and scans edges, sparse flow, balances, and monitor capacities a constant number of times. Under unit-cost RAM operations on bounded-width identifiers/integers, its main verification work is `O(|W|+|A|+|certificate|)`. In a bit-complexity accounting, arithmetic cost also depends on the logarithmic widths of the admitted integers (the executable checker caps certificate integers at `10^18`). This proposition does not bound LP or circulation production time.
 

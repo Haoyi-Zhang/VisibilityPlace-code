@@ -6,11 +6,11 @@ The campaign uses one Python process and one worker under a 3 GiB address-space 
 
 The deterministic suite contains 120 owned synthetic models: 36 Tiny, 48 Layered, 12 Fan, 12 Infeasible, and 12 Vacuous. Maximum declared dimensions are 500 physical vertices, 2,000 permitted physical edges (1,428 observed), 32 permitted monitor components (31 observed), and horizon 16 (14 observed). Retained outcomes are 96 optimal, 12 infeasible, and 12 vacuous. The maximum compiled graph has 2,033 vertices and 4,017 edges; the largest certificate is 16,711 bytes.
 
-Direct physical semantics, independently compiled paths, and brute-force placement agree on 44 retained cases. All 120 retained certificates are accepted by the repaired checker. All 21 malformed or out-of-class controls are rejected. Twenty-four contract tests pass.
+Direct physical semantics, independently compiled paths, and brute-force placement agree on 44 retained cases. All 120 retained certificates are accepted by the checker. All 21 retained malformed or out-of-class controls are rejected. The earlier Linux replay reports 24 passing contract tests. Five additional solver-free input/encoding tests bring the suite to 29; those five pass separately on Windows.
 
 The historical retained campaign measured about 7.51 CPU seconds, 7.51 wall seconds, and 410,016 KiB peak process RSS. Its Python and dependency versions were not preserved and cannot be recovered from the evidence. These values are retained as descriptive observations; no version fingerprint is invented.
 
-The current repair replay was actually run on the platform and dependency set recorded in `docs/environment.md`. Its resource measurements are separate run-local observations, not replacements for the historical record or portable performance guarantees.
+The supplied earlier Linux repair replay used the platform and dependencies recorded in `docs/environment.md`. The separate Windows standard-library run does not invoke the Linux launcher or producer. Its certificate, graph, oracle, and derived-data checks are not a fresh strict producer replay or replacements for historical resource observations.
 
 ## Complete bounded three-vertex universe
 
@@ -41,7 +41,7 @@ The parser admits monitor costs through `10^6` and rejects `10^6+1`. The certifi
 
 ## Clean installation and commands
 
-The precise current environment and install commands are in `docs/environment.md`. In brief:
+The recorded Linux replay environment and install commands are in `docs/environment.md`. In brief:
 
 ```bash
 python3 -m venv .venv
@@ -96,6 +96,8 @@ Certificates carry the neutral `case` string but no model-content digest. Compil
 9. **Snapshot wording and implementation bounds.** Documentation now matches the actual plain case identifier, input-order numbering, cost bound, and certificate-integer cap.
 
 None of these repairs changes the 120 retained model statuses, optimum costs, certificate objects, baseline values, or plotted quantitative data.
+
+Input decoding now rejects duplicate JSON object keys and non-JSON numeric constants. Policy actions and flow edge identifiers are type-checked before set/dictionary lookup, so malformed fields use the declared rejection interface rather than an uncaught `TypeError`. JSON and derived TeX writers explicitly select LF newlines: host newline conversion no longer changes certificate byte counts or deterministic derived files. The Windows run revalidates all retained certificates and controls, the 44 campaign oracles, all 13,720 universe models, and the 200 models' semantics/classifications. All five added tests pass, and regeneration from retained rows reproduces all eight derived files exactly. No fresh producer certificate was generated in that run.
 
 ## Interpretation
 

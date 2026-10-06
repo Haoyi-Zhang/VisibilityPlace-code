@@ -71,7 +71,8 @@ def validate_model(model):
         u, v, boundary, action = item
         if not _integer(u, 0, n - 1) or not _integer(v, 0, n - 1) or u == v:
             raise ValueError("bad physical endpoint")
-        if not _integer(boundary, 0, 1) or action not in ACTIONS:
+        if (not _integer(boundary, 0, 1) or not isinstance(action, str)
+                or action not in ACTIONS):
             raise ValueError("bad boundary or policy action")
         if (u, v) in seen:
             raise ValueError("parallel physical edges are excluded")
