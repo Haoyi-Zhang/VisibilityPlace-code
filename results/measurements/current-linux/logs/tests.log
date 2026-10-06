@@ -1,0 +1,35 @@
+test_all_models_validate (test_contract.ContractTests.test_all_models_validate) ... ok
+test_boolean_certificate_integer_rejected (test_contract.ContractTests.test_boolean_certificate_integer_rejected) ... ok
+test_bounded_exhaustive_three_vertex_universe (test_contract.ContractTests.test_bounded_exhaustive_three_vertex_universe) ... ok
+test_certificate_integer_admission_boundary (test_contract.ContractTests.test_certificate_integer_admission_boundary) ... ok
+test_certificate_is_revalidated_not_snapshot_bound (test_contract.ContractTests.test_certificate_is_revalidated_not_snapshot_bound) ... ok
+test_checker_command_without_site_packages (test_contract.ContractTests.test_checker_command_without_site_packages) ... ok
+test_compilers_are_structurally_equal (test_contract.ContractTests.test_compilers_are_structurally_equal) ... ok
+test_fan_baseline_gap (test_contract.ContractTests.test_fan_baseline_gap) ... ok
+test_fixed_seed_differential_fuzz (test_contract.ContractTests.test_fixed_seed_differential_fuzz) ... ok
+test_flow_mutation_rejected (test_contract.ContractTests.test_flow_mutation_rejected) ... ok
+test_local_hook_rejected (test_contract.ContractTests.test_local_hook_rejected) ... ok
+test_monitor_cost_admission_boundary (test_contract.ContractTests.test_monitor_cost_admission_boundary) ... ok
+test_negative_overflow_rejected (test_contract.ContractTests.test_negative_overflow_rejected) ... ok
+test_oversized_sparse_lists_rejected (test_contract.ContractTests.test_oversized_sparse_lists_rejected) ... ok
+test_primal_dual_equality (test_contract.ContractTests.test_primal_dual_equality) ... ok
+test_reachable_false_vacuity_rejected (test_contract.ContractTests.test_reachable_false_vacuity_rejected) ... ok
+test_removed_monitor_rejected (test_contract.ContractTests.test_removed_monitor_rejected) ... ok
+test_representative_statuses (test_contract.ContractTests.test_representative_statuses) ... ok
+test_retained_certificates_when_present (test_contract.ContractTests.test_retained_certificates_when_present) ... ok
+test_suite_size_and_identifiers (test_contract.ContractTests.test_suite_size_and_identifiers) ... ok
+test_tiny_optima (test_contract.ContractTests.test_tiny_optima) ... ok
+test_tiny_path_semantics (test_contract.ContractTests.test_tiny_path_semantics) ... ok
+test_unknown_flow_edge_rejected (test_contract.ContractTests.test_unknown_flow_edge_rejected) ... ok
+test_unreachable_false_optimal_rejected (test_contract.ContractTests.test_unreachable_false_optimal_rejected) ... ok
+test_duplicate_json_fields_rejected_at_every_object_depth (test_input_contract.InputContractTests.test_duplicate_json_fields_rejected_at_every_object_depth) ... ok
+test_flow_edge_identifier_requires_string (test_input_contract.InputContractTests.test_flow_edge_identifier_requires_string) ... ok
+test_json_writer_uses_utf8_and_literal_lf (test_input_contract.InputContractTests.test_json_writer_uses_utf8_and_literal_lf) ... ok
+test_non_json_numeric_constants_rejected (test_input_contract.InputContractTests.test_non_json_numeric_constants_rejected) ... ok
+test_policy_action_requires_string (test_input_contract.InputContractTests.test_policy_action_requires_string) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 4.561s
+
+OK
+{"errors": 0, "failures": 0, "passed": true, "peak_rss_kib": 145288, "process_cpu_seconds_recorded": 5.291297991, "tests": 29, "wall_seconds": 5.364916066999996}
