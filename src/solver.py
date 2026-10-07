@@ -15,6 +15,7 @@ import numpy as np
 from scipy.optimize import linprog
 
 from dag import INF, reachable, selected_distance, shortest_path, topological
+from dag import _selected_distance, _shortest_path
 from producer_compile import compile_model
 
 
@@ -62,8 +63,8 @@ def _fractional_lp(graph, model, k):
     return result.x[:m], float(result.fun)
 
 
-def _weighted_distances(graph, x, k):
-    order = topological(graph)
+def _weighted_distances(graph, x, k, order=None):
+    order = topological(graph) if order is None else order
     distance = [math.inf] * len(graph["nodes"])
     distance[graph["source"]] = 0.0
     for u in order:
@@ -106,8 +107,9 @@ def _crosses(distance_u, distance_v, alpha, k):
     return False
 
 
-def _round_fractional(graph, model, x, k):
-    distance = _weighted_distances(graph, x, k)
+def _round_fractional(graph, model, x, k, order=None):
+    order = tuple(topological(graph)) if order is None else order
+    distance = _weighted_distances(graph, x, k, order)
     candidates = []
     costs = [item[2] for item in model["monitors"]]
     for alpha in _alpha_candidates(distance):
@@ -117,7 +119,7 @@ def _round_fractional(graph, model, x, k):
                 distance[edge["u"]], distance[edge["v"]], alpha, k
             ):
                 selected.add(edge["monitor"])
-        exact_distance, _ = selected_distance(graph, selected)
+        exact_distance, _ = _selected_distance(graph, selected, order)
         if exact_distance[graph["target"]] >= k:
             cost = sum(costs[m] for m in selected)
             candidates.append((cost, tuple(sorted(selected)), alpha))
@@ -126,8 +128,9 @@ def _round_fractional(graph, model, x, k):
     return min(candidates)
 
 
-def _coverage_potential(graph, selected, k):
-    distance, _ = selected_distance(graph, selected)
+def _coverage_potential(graph, selected, k, order=None):
+    order = topological(graph) if order is None else order
+    distance, _ = _selected_distance(graph, selected, order)
     potential = []
     for value in distance:
         potential.append(k if value == INF else min(k, int(value)))
@@ -217,8 +220,10 @@ def solve(model):
             "compiled_edges": len(graph["edges"]),
             "producer_ms": 1000.0 * (time.perf_counter() - start),
         }
-    all_distance, all_path = shortest_path(
-        graph, lambda edge: 1 if edge["kind"] == "monitor" else 0
+    # Fresh graph owned by this solve; reuse the existing queue order only here.
+    order = tuple(topological(graph))
+    all_distance, all_path = _shortest_path(
+        graph, lambda edge: 1 if edge["kind"] == "monitor" else 0, order
     )
     if all_distance[graph["target"]] < k:
         certificate = {
@@ -237,9 +242,9 @@ def solve(model):
             "producer_ms": 1000.0 * (time.perf_counter() - start),
         }
     x, lp_objective = _fractional_lp(graph, model, k)
-    cost, selected_tuple, alpha = _round_fractional(graph, model, x, k)
+    cost, selected_tuple, alpha = _round_fractional(graph, model, x, k, order)
     selected = set(selected_tuple)
-    potential = _coverage_potential(graph, selected, k)
+    potential = _coverage_potential(graph, selected, k, order)
     flow_value, flow, overflow, dual_value = _dual_certificate(graph, model, k)
     if dual_value != cost:
         raise ProductionError(

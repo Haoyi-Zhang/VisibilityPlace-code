@@ -53,6 +53,22 @@ A current Ubuntu 24.04/Python 3.13.5 execution with the pinned libraries passes 
 
 ## Clean reproduction
 
+The producer prepares the existing queue-based compiled-DAG order once within
+each reachable `solve` invocation and reuses it for weighted distances,
+threshold candidates and coverage. It does not cache mutable graphs across
+calls. Public DAG scans still recompute their order; checker reconstruction,
+ordered witnesses, rounding arithmetic, baselines and certificate fields are
+unchanged. This is an implementation reuse, not a measured speedup.
+
+Separate current regressions (not the retained 29-test record) run explicitly
+in scientific CI: seven portable literal path/admission tests and three
+producer conformance tests requiring the existing pinned libraries:
+
+```bash
+python3 -B tests/prepared_dag_regression.py
+python3 -B tests/prepared_solver_regression.py
+```
+
 Run from the repository root; each named output directory must be absent or empty:
 
 ```bash

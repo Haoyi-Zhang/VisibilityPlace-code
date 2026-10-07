@@ -36,7 +36,11 @@ def reachable(graph):
 
 
 def shortest_path(graph, edge_length):
-    order = topological(graph)
+    return _shortest_path(graph, edge_length, topological(graph))
+
+
+def _shortest_path(graph, edge_length, order):
+    """Scan an invocation-local, already validated order; no graph cache."""
     dist = [INF] * len(graph["nodes"])
     previous = [None] * len(graph["nodes"])
     dist[graph["source"]] = 0
@@ -66,7 +70,12 @@ def shortest_path(graph, edge_length):
 
 
 def selected_distance(graph, selected):
-    return shortest_path(
+    return _selected_distance(graph, selected, topological(graph))
+
+
+def _selected_distance(graph, selected, order):
+    return _shortest_path(
         graph,
         lambda edge: 1 if edge["kind"] == "monitor" and edge["monitor"] in selected else 0,
+        order,
     )
