@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src"))
 
 from checker import verify
+from comparison import project_summary
 from instances import all_cases
 from io_utils import load_json
 
@@ -63,7 +64,7 @@ def audit_campaign(observed: Path, mode: str):
         raise ValueError("campaign " + mode + " rows differ")
     if csv_rows(expected / "controls.csv") != csv_rows(observed / "controls.csv"):
         raise ValueError("campaign controls differ")
-    if load_json(expected / "summary.json") != load_json(observed / "summary.json"):
+    if project_summary(load_json(expected / "summary.json"), mode) != project_summary(load_json(observed / "summary.json"), mode):
         raise ValueError("campaign summary differs")
     models = {model["case"]: model for model in all_cases()}
     expected_names = sorted(path.name for path in (expected / "certificates").glob("*.json"))

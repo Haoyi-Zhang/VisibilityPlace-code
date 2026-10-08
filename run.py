@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from bounds import install_limits
 from checker import Rejected, verify
+from comparison import project_summary
 from controls import run_controls
 from instances import all_cases
 from io_utils import fresh_directory, load_json, write_csv, write_json
@@ -179,7 +180,7 @@ def main():
         expected = ROOT / "results" / "campaign"
         if _project_rows(expected / "cases.csv", args.mode) != _project_rows(args.observed / "cases.csv", args.mode):
             raise ValueError(args.mode + " campaign fields differ")
-        if load_json(expected / "summary.json") != load_json(args.observed / "summary.json"):
+        if project_summary(load_json(expected / "summary.json"), args.mode) != project_summary(load_json(args.observed / "summary.json"), args.mode):
             raise ValueError("summary differs")
         if _project_rows(expected / "controls.csv", "strict") != _project_rows(args.observed / "controls.csv", "strict"):
             raise ValueError("control outcomes or rejection reasons differ")

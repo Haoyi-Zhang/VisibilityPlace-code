@@ -51,6 +51,7 @@ jobs:
           run_check environment python -B -c 'import platform,sys,numpy,scipy,networkx; print(platform.platform()); print(sys.version); print(numpy.__version__,scipy.__version__,networkx.__version__)'
           run_check materials python -B .github/scripts/check_repository.py
           run_check prepared-dag python -B tests/prepared_dag_regression.py
+          run_check semantic-summary python -B tests/test_semantic_comparison.py
           run_check prepared-solver python -B tests/prepared_solver_regression.py
           run_check tests python -B test.py
           run_check exhaustive python -B exhaustive.py --out scientific-output/exhaustive
