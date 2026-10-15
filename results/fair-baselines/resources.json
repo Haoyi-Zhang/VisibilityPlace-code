@@ -1,0 +1,47 @@
+{
+  "compact-milp": {
+    "cold_batch_wall_ms": 2564.9367999940296,
+    "import_ms": 300.14919999666745,
+    "numpy": "2.5.4",
+    "peak_process_rss_bytes": 94048256,
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "scipy": "1.17.0"
+  },
+  "cover-greedy": {
+    "cold_batch_wall_ms": 1704.1909000035957,
+    "import_ms": 330.36019999417476,
+    "numpy": "2.5.4",
+    "peak_process_rss_bytes": 85323776,
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "scipy": "1.17.0"
+  },
+  "dense-lp": {
+    "cold_batch_wall_ms": 5165.675999996893,
+    "import_ms": 332.4008999989019,
+    "numpy": "2.5.4",
+    "peak_process_rss_bytes": 288874496,
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "scipy": "1.17.0"
+  },
+  "explicit-milp": {
+    "cold_batch_wall_ms": 2387.6959000044735,
+    "import_ms": 321.1124000008567,
+    "numpy": "2.5.4",
+    "peak_process_rss_bytes": 90697728,
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "scipy": "1.17.0"
+  },
+  "sparse-lp": {
+    "cold_batch_wall_ms": 3078.1963000044925,
+    "import_ms": 318.2319000043208,
+    "numpy": "2.5.4",
+    "peak_process_rss_bytes": 94171136,
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "scipy": "1.17.0"
+  }
+}

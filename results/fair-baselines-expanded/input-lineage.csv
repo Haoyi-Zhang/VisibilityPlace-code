@@ -1,0 +1,11 @@
+case,source,source_index,transformation
+Choice2x4k1,structured-inputs.json,0,exact model object; JSON serialization only
+Choice2x4k3,structured-inputs.json,1,exact model object; JSON serialization only
+Choice2x8k1,structured-inputs.json,2,exact model object; JSON serialization only
+Choice2x8k3,structured-inputs.json,3,exact model object; JSON serialization only
+Choice2x14k1,structured-inputs.json,4,exact model object; JSON serialization only
+Choice2x14k3,structured-inputs.json,5,exact model object; JSON serialization only
+Choice3x6k1,structured-inputs.json,6,exact model object; JSON serialization only
+Choice3x6k3,structured-inputs.json,7,exact model object; JSON serialization only
+Choice4x8k1,structured-inputs.json,8,exact model object; JSON serialization only
+Choice4x8k3,structured-inputs.json,9,exact model object; JSON serialization only

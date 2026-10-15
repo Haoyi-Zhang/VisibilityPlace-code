@@ -1,0 +1,115 @@
+{
+  "methods": {
+    "compact-milp": {
+      "above_optimum": 0,
+      "certified": 30,
+      "completed": 30,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.06170000051497482,
+          "check_median_ms": 0.3510000024107285,
+          "classification_median_ms": 0.04350000017439015,
+          "compile_median_ms": 0.23074999990058132,
+          "completed": 30,
+          "input_median_ms": 0.10634999853209592,
+          "primal_median_ms": 1.6177500037883874,
+          "serialize_median_ms": 0.027399997634347528,
+          "total_median_ms": 2.9479999975592364,
+          "witness_median_ms": 0.5237000004854053
+        }
+      },
+      "max_quality_ratio": 1.0
+    },
+    "cover-greedy": {
+      "above_optimum": 30,
+      "certified": 0,
+      "completed": 30,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.06165000013425015,
+          "check_median_ms": 0.3264500046498142,
+          "classification_median_ms": 0.04474999877857044,
+          "compile_median_ms": 0.24474999736412428,
+          "completed": 30,
+          "input_median_ms": 0.10834999920916744,
+          "primal_median_ms": 6.532700001116609,
+          "serialize_median_ms": 0.013699998817173764,
+          "total_median_ms": 7.354550001764437,
+          "witness_median_ms": 0.0012999989849049598
+        }
+      },
+      "max_quality_ratio": 2.7142857142857144
+    },
+    "dense-lp": {
+      "above_optimum": 0,
+      "certified": 30,
+      "completed": 30,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.060599999414989725,
+          "check_median_ms": 0.3520499994920101,
+          "classification_median_ms": 0.04239999907440506,
+          "compile_median_ms": 0.23584999871673062,
+          "completed": 30,
+          "input_median_ms": 0.10905000090133399,
+          "primal_median_ms": 1.844600003096275,
+          "serialize_median_ms": 0.02599999788799323,
+          "total_median_ms": 3.206949997547781,
+          "witness_median_ms": 0.5100000016682316
+        }
+      },
+      "max_quality_ratio": 1.0
+    },
+    "explicit-milp": {
+      "above_optimum": 0,
+      "certified": 30,
+      "completed": 30,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.06355000004987232,
+          "check_median_ms": 0.3627500009315554,
+          "classification_median_ms": 0.04305000038584694,
+          "compile_median_ms": 0.24185000074794516,
+          "completed": 30,
+          "input_median_ms": 0.1171000003523659,
+          "primal_median_ms": 5.888199997571064,
+          "serialize_median_ms": 0.029649996577063575,
+          "total_median_ms": 7.386850000330014,
+          "witness_median_ms": 0.5410500016296282
+        }
+      },
+      "max_quality_ratio": 1.0
+    },
+    "sparse-lp": {
+      "above_optimum": 0,
+      "certified": 30,
+      "completed": 30,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.10004999785451218,
+          "check_median_ms": 0.6318500018096529,
+          "classification_median_ms": 0.07230000119307078,
+          "compile_median_ms": 0.41805000000749715,
+          "completed": 30,
+          "input_median_ms": 0.18384999930276535,
+          "primal_median_ms": 3.65954999870155,
+          "serialize_median_ms": 0.050249997002538294,
+          "total_median_ms": 5.97235000168439,
+          "witness_median_ms": 0.809799999842653
+        }
+      },
+      "max_quality_ratio": 1.0
+    }
+  },
+  "models": 10,
+  "observation_state_cap": 262144,
+  "repetitions": 3,
+  "retained_models": 0,
+  "retained_suite_read_ms": 0.0012999953469261527,
+  "structured_models": 10
+}

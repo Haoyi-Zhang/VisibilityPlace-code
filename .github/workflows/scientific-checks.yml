@@ -51,6 +51,10 @@ jobs:
           run_check environment python -B -c 'import platform,sys,numpy,scipy,networkx; print(platform.platform()); print(sys.version); print(numpy.__version__,scipy.__version__,networkx.__version__)'
           run_check materials python -B .github/scripts/check_repository.py
           run_check prepared-dag python -B tests/prepared_dag_regression.py
+          run_check fair-baselines python -B tests/test_fair_baselines.py
+          run_check fair-baselines-optimized python -B -O tests/test_fair_baselines.py
+          run_check fair-replay-main python -B -S verify_fair.py --results results/fair-baselines
+          run_check fair-replay-expanded python -B -S verify_fair.py --results results/fair-baselines-expanded
           run_check semantic-summary python -B tests/test_semantic_comparison.py
           run_check prepared-solver python -B tests/prepared_solver_regression.py
           run_check tests python -B test.py

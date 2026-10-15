@@ -10,7 +10,6 @@ from fractions import Fraction
 import math
 import time
 
-import networkx as nx
 import numpy as np
 from scipy.optimize import linprog
 
@@ -140,6 +139,8 @@ def _coverage_potential(graph, selected, k, order=None):
 
 
 def _dual_certificate(graph, model, k):
+    import networkx as nx
+
     total_cost = sum(item[2] for item in model["monitors"])
     capacity = total_cost + 1
     network = nx.DiGraph()

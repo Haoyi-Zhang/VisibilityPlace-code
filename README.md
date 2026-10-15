@@ -98,6 +98,18 @@ Neither mode is a claim about all future dependency releases. A strict match is 
 
 ## Retained evidence
 
+The same-information comparison in [docs/fair-baselines.md](docs/fair-baselines.md)
+adds generic compact and explicit weighted-multicover MILPs, weighted
+coverage-per-cost greedy, and a sparse LP control. All exact routes use the
+same integer evidence producer and original checker. Results include input
+read/admission, primal and evidence production, checking, serialized output,
+total time and isolated process peak RSS. The 120 original models and ten
+structured choice products are retained with all unfavorable comparisons;
+no LP speed or solution-quality advantage over generic MILP is claimed.
+`fair_compare.py` needs NumPy/SciPy but not NetworkX; `verify_fair.py` replays
+its stored results with site packages disabled. The default historical
+`solve` and its NetworkX dependency are unchanged apart from a deferred import.
+
 * 120-model deterministic campaign: 96 optimal, 12 infeasible, and 12 vacuous certificates.
 * 44 campaign cases with direct-semantics / compiled-path / brute-force oracle agreement.
 * 21 malformed or out-of-class controls, including both a reachable false-vacuity declaration and the exact unreachable false-optimal candidate, all rejected.

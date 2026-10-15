@@ -1,0 +1,1491 @@
+{
+  "Choice2x4k1": {
+    "case": "Choice2x4k1",
+    "cost": 10,
+    "selected": [
+      0,
+      1,
+      5
+    ],
+    "status": "feasible"
+  },
+  "Choice2x4k3": {
+    "case": "Choice2x4k3",
+    "cost": 34,
+    "selected": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "status": "feasible"
+  },
+  "Choice2x8k1": {
+    "case": "Choice2x8k1",
+    "cost": 15,
+    "selected": [
+      0,
+      5,
+      8,
+      9,
+      13
+    ],
+    "status": "feasible"
+  },
+  "Choice2x8k3": {
+    "case": "Choice2x8k3",
+    "cost": 38,
+    "selected": [
+      0,
+      1,
+      5,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    "status": "feasible"
+  },
+  "Choice3x6k1": {
+    "case": "Choice3x6k1",
+    "cost": 13,
+    "selected": [
+      1,
+      6,
+      7,
+      8,
+      13
+    ],
+    "status": "feasible"
+  },
+  "Choice3x6k3": {
+    "case": "Choice3x6k3",
+    "cost": 55,
+    "selected": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "status": "feasible"
+  },
+  "F000": {
+    "case": "F000",
+    "cost": 2,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F001": {
+    "case": "F001",
+    "cost": 2,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F002": {
+    "case": "F002",
+    "cost": 3,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F003": {
+    "case": "F003",
+    "cost": 3,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F004": {
+    "case": "F004",
+    "cost": 4,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F005": {
+    "case": "F005",
+    "cost": 4,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F006": {
+    "case": "F006",
+    "cost": 5,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F007": {
+    "case": "F007",
+    "cost": 5,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F008": {
+    "case": "F008",
+    "cost": 6,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F009": {
+    "case": "F009",
+    "cost": 6,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F010": {
+    "case": "F010",
+    "cost": 7,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "F011": {
+    "case": "F011",
+    "cost": 7,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "I000": {
+    "all_monitor_count": 1,
+    "case": "I000",
+    "k": 2,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00011",
+      "e00000",
+      "e00014",
+      "e00002",
+      "e00003",
+      "e00016",
+      "e00005",
+      "e00018",
+      "e00007",
+      "e00020",
+      "e00009",
+      "e00012"
+    ]
+  },
+  "I001": {
+    "all_monitor_count": 2,
+    "case": "I001",
+    "k": 3,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00016",
+      "e00000",
+      "e00019",
+      "e00002",
+      "e00003",
+      "e00021",
+      "e00005",
+      "e00006",
+      "e00023",
+      "e00008",
+      "e00025",
+      "e00010",
+      "e00027",
+      "e00012",
+      "e00029",
+      "e00014",
+      "e00017"
+    ]
+  },
+  "I002": {
+    "all_monitor_count": 3,
+    "case": "I002",
+    "k": 4,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00021",
+      "e00000",
+      "e00024",
+      "e00002",
+      "e00003",
+      "e00026",
+      "e00005",
+      "e00006",
+      "e00028",
+      "e00008",
+      "e00009",
+      "e00030",
+      "e00011",
+      "e00032",
+      "e00013",
+      "e00034",
+      "e00015",
+      "e00036",
+      "e00017",
+      "e00038",
+      "e00019",
+      "e00022"
+    ]
+  },
+  "I003": {
+    "all_monitor_count": 4,
+    "case": "I003",
+    "k": 5,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00020",
+      "e00000",
+      "e00023",
+      "e00002",
+      "e00003",
+      "e00025",
+      "e00005",
+      "e00006",
+      "e00027",
+      "e00008",
+      "e00009",
+      "e00029",
+      "e00011",
+      "e00012",
+      "e00031",
+      "e00014",
+      "e00033",
+      "e00016",
+      "e00035",
+      "e00018",
+      "e00021"
+    ]
+  },
+  "I004": {
+    "all_monitor_count": 1,
+    "case": "I004",
+    "k": 2,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00013",
+      "e00000",
+      "e00016",
+      "e00002",
+      "e00003",
+      "e00018",
+      "e00005",
+      "e00020",
+      "e00007",
+      "e00022",
+      "e00009",
+      "e00024",
+      "e00011",
+      "e00014"
+    ]
+  },
+  "I005": {
+    "all_monitor_count": 2,
+    "case": "I005",
+    "k": 3,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00018",
+      "e00000",
+      "e00021",
+      "e00002",
+      "e00003",
+      "e00023",
+      "e00005",
+      "e00006",
+      "e00025",
+      "e00008",
+      "e00027",
+      "e00010",
+      "e00029",
+      "e00012",
+      "e00031",
+      "e00014",
+      "e00033",
+      "e00016",
+      "e00019"
+    ]
+  },
+  "I006": {
+    "all_monitor_count": 3,
+    "case": "I006",
+    "k": 4,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00017",
+      "e00000",
+      "e00020",
+      "e00002",
+      "e00003",
+      "e00022",
+      "e00005",
+      "e00006",
+      "e00024",
+      "e00008",
+      "e00009",
+      "e00026",
+      "e00011",
+      "e00028",
+      "e00013",
+      "e00030",
+      "e00015",
+      "e00018"
+    ]
+  },
+  "I007": {
+    "all_monitor_count": 4,
+    "case": "I007",
+    "k": 5,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00022",
+      "e00000",
+      "e00025",
+      "e00002",
+      "e00003",
+      "e00027",
+      "e00005",
+      "e00006",
+      "e00029",
+      "e00008",
+      "e00009",
+      "e00031",
+      "e00011",
+      "e00012",
+      "e00033",
+      "e00014",
+      "e00035",
+      "e00016",
+      "e00037",
+      "e00018",
+      "e00039",
+      "e00020",
+      "e00023"
+    ]
+  },
+  "I008": {
+    "all_monitor_count": 1,
+    "case": "I008",
+    "k": 2,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00015",
+      "e00000",
+      "e00018",
+      "e00002",
+      "e00003",
+      "e00020",
+      "e00005",
+      "e00022",
+      "e00007",
+      "e00024",
+      "e00009",
+      "e00026",
+      "e00011",
+      "e00028",
+      "e00013",
+      "e00016"
+    ]
+  },
+  "I009": {
+    "all_monitor_count": 2,
+    "case": "I009",
+    "k": 3,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00014",
+      "e00000",
+      "e00017",
+      "e00002",
+      "e00003",
+      "e00019",
+      "e00005",
+      "e00006",
+      "e00021",
+      "e00008",
+      "e00023",
+      "e00010",
+      "e00025",
+      "e00012",
+      "e00015"
+    ]
+  },
+  "I010": {
+    "all_monitor_count": 3,
+    "case": "I010",
+    "k": 4,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00019",
+      "e00000",
+      "e00022",
+      "e00002",
+      "e00003",
+      "e00024",
+      "e00005",
+      "e00006",
+      "e00026",
+      "e00008",
+      "e00009",
+      "e00028",
+      "e00011",
+      "e00030",
+      "e00013",
+      "e00032",
+      "e00015",
+      "e00034",
+      "e00017",
+      "e00020"
+    ]
+  },
+  "I011": {
+    "all_monitor_count": 4,
+    "case": "I011",
+    "k": 5,
+    "schema": "vcm-certificate-1",
+    "status": "infeasible",
+    "witness": [
+      "e00024",
+      "e00000",
+      "e00027",
+      "e00002",
+      "e00003",
+      "e00029",
+      "e00005",
+      "e00006",
+      "e00031",
+      "e00008",
+      "e00009",
+      "e00033",
+      "e00011",
+      "e00012",
+      "e00035",
+      "e00014",
+      "e00037",
+      "e00016",
+      "e00039",
+      "e00018",
+      "e00041",
+      "e00020",
+      "e00043",
+      "e00022",
+      "e00025"
+    ]
+  },
+  "L000": {
+    "case": "L000",
+    "cost": 25,
+    "selected": [
+      0,
+      1
+    ],
+    "status": "feasible"
+  },
+  "L001": {
+    "case": "L001",
+    "cost": 26,
+    "selected": [
+      0,
+      1,
+      5
+    ],
+    "status": "feasible"
+  },
+  "L002": {
+    "case": "L002",
+    "cost": 42,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L003": {
+    "case": "L003",
+    "cost": 73,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L004": {
+    "case": "L004",
+    "cost": 15,
+    "selected": [
+      0,
+      5
+    ],
+    "status": "feasible"
+  },
+  "L005": {
+    "case": "L005",
+    "cost": 35,
+    "selected": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "status": "feasible"
+  },
+  "L006": {
+    "case": "L006",
+    "cost": 41,
+    "selected": [
+      0,
+      1,
+      2,
+      5
+    ],
+    "status": "feasible"
+  },
+  "L007": {
+    "case": "L007",
+    "cost": 66,
+    "selected": [
+      0,
+      1,
+      2,
+      3,
+      8
+    ],
+    "status": "feasible"
+  },
+  "L008": {
+    "case": "L008",
+    "cost": 14,
+    "selected": [
+      0,
+      8
+    ],
+    "status": "feasible"
+  },
+  "L009": {
+    "case": "L009",
+    "cost": 42,
+    "selected": [
+      0,
+      1,
+      2,
+      5,
+      14
+    ],
+    "status": "feasible"
+  },
+  "L010": {
+    "case": "L010",
+    "cost": 44,
+    "selected": [
+      0,
+      1,
+      2,
+      4,
+      7
+    ],
+    "status": "feasible"
+  },
+  "L011": {
+    "case": "L011",
+    "cost": 77,
+    "selected": [
+      0,
+      1,
+      2,
+      3,
+      19,
+      23
+    ],
+    "status": "feasible"
+  },
+  "L012": {
+    "case": "L012",
+    "cost": 31,
+    "selected": [
+      0,
+      4,
+      10,
+      16
+    ],
+    "status": "feasible"
+  },
+  "L013": {
+    "case": "L013",
+    "cost": 22,
+    "selected": [
+      0,
+      1,
+      6
+    ],
+    "status": "feasible"
+  },
+  "L014": {
+    "case": "L014",
+    "cost": 66,
+    "selected": [
+      0,
+      1,
+      2,
+      5,
+      6
+    ],
+    "status": "feasible"
+  },
+  "L015": {
+    "case": "L015",
+    "cost": 50,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L016": {
+    "case": "L016",
+    "cost": 24,
+    "selected": [
+      0,
+      1
+    ],
+    "status": "feasible"
+  },
+  "L017": {
+    "case": "L017",
+    "cost": 38,
+    "selected": [
+      0,
+      1,
+      6
+    ],
+    "status": "feasible"
+  },
+  "L018": {
+    "case": "L018",
+    "cost": 53,
+    "selected": [
+      0,
+      1,
+      2,
+      8
+    ],
+    "status": "feasible"
+  },
+  "L019": {
+    "case": "L019",
+    "cost": 81,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L020": {
+    "case": "L020",
+    "cost": 30,
+    "selected": [
+      0,
+      4,
+      8,
+      10
+    ],
+    "status": "feasible"
+  },
+  "L021": {
+    "case": "L021",
+    "cost": 45,
+    "selected": [
+      0,
+      1,
+      7,
+      12
+    ],
+    "status": "feasible"
+  },
+  "L022": {
+    "case": "L022",
+    "cost": 59,
+    "selected": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      10
+    ],
+    "status": "feasible"
+  },
+  "L023": {
+    "case": "L023",
+    "cost": 62,
+    "selected": [
+      0,
+      1,
+      2,
+      3,
+      15
+    ],
+    "status": "feasible"
+  },
+  "L024": {
+    "case": "L024",
+    "cost": 26,
+    "selected": [
+      0,
+      18
+    ],
+    "status": "feasible"
+  },
+  "L025": {
+    "case": "L025",
+    "cost": 46,
+    "selected": [
+      0,
+      1,
+      13,
+      28
+    ],
+    "status": "feasible"
+  },
+  "L026": {
+    "case": "L026",
+    "cost": 41,
+    "selected": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "status": "feasible"
+  },
+  "L027": {
+    "case": "L027",
+    "cost": 62,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L028": {
+    "case": "L028",
+    "cost": 21,
+    "selected": [
+      0,
+      4
+    ],
+    "status": "feasible"
+  },
+  "L029": {
+    "case": "L029",
+    "cost": 29,
+    "selected": [
+      0,
+      1,
+      7
+    ],
+    "status": "feasible"
+  },
+  "L030": {
+    "case": "L030",
+    "cost": 58,
+    "selected": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7
+    ],
+    "status": "feasible"
+  },
+  "L031": {
+    "case": "L031",
+    "cost": 60,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L032": {
+    "case": "L032",
+    "cost": 29,
+    "selected": [
+      0,
+      1,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L033": {
+    "case": "L033",
+    "cost": 39,
+    "selected": [
+      0,
+      1,
+      2,
+      6,
+      8
+    ],
+    "status": "feasible"
+  },
+  "L034": {
+    "case": "L034",
+    "cost": 64,
+    "selected": [
+      0,
+      1,
+      2,
+      7,
+      9
+    ],
+    "status": "feasible"
+  },
+  "L035": {
+    "case": "L035",
+    "cost": 73,
+    "selected": [
+      0,
+      1,
+      2,
+      3,
+      9,
+      13
+    ],
+    "status": "feasible"
+  },
+  "L036": {
+    "case": "L036",
+    "cost": 29,
+    "selected": [
+      0,
+      10,
+      15
+    ],
+    "status": "feasible"
+  },
+  "L037": {
+    "case": "L037",
+    "cost": 39,
+    "selected": [
+      0,
+      1,
+      5,
+      10,
+      21
+    ],
+    "status": "feasible"
+  },
+  "L038": {
+    "case": "L038",
+    "cost": 47,
+    "selected": [
+      0,
+      1,
+      2,
+      10,
+      20
+    ],
+    "status": "feasible"
+  },
+  "L039": {
+    "case": "L039",
+    "cost": 49,
+    "selected": [
+      0,
+      1,
+      2,
+      3,
+      7
+    ],
+    "status": "feasible"
+  },
+  "L040": {
+    "case": "L040",
+    "cost": 14,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "L041": {
+    "case": "L041",
+    "cost": 23,
+    "selected": [
+      0,
+      1
+    ],
+    "status": "feasible"
+  },
+  "L042": {
+    "case": "L042",
+    "cost": 44,
+    "selected": [
+      0,
+      1,
+      2
+    ],
+    "status": "feasible"
+  },
+  "L043": {
+    "case": "L043",
+    "cost": 58,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "L044": {
+    "case": "L044",
+    "cost": 17,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "L045": {
+    "case": "L045",
+    "cost": 26,
+    "selected": [
+      0,
+      1,
+      4
+    ],
+    "status": "feasible"
+  },
+  "L046": {
+    "case": "L046",
+    "cost": 60,
+    "selected": [
+      0,
+      1,
+      2,
+      9
+    ],
+    "status": "feasible"
+  },
+  "L047": {
+    "case": "L047",
+    "cost": 45,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "T000": {
+    "case": "T000",
+    "cost": 13,
+    "selected": [
+      0,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T001": {
+    "case": "T001",
+    "cost": 31,
+    "selected": [
+      0,
+      1,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T002": {
+    "case": "T002",
+    "cost": 42,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "T003": {
+    "case": "T003",
+    "cost": 18,
+    "selected": [
+      0,
+      2
+    ],
+    "status": "feasible"
+  },
+  "T004": {
+    "case": "T004",
+    "cost": 30,
+    "selected": [
+      0,
+      1
+    ],
+    "status": "feasible"
+  },
+  "T005": {
+    "case": "T005",
+    "cost": 57,
+    "selected": [
+      0,
+      1,
+      2
+    ],
+    "status": "feasible"
+  },
+  "T006": {
+    "case": "T006",
+    "cost": 28,
+    "selected": [
+      0,
+      3
+    ],
+    "status": "feasible"
+  },
+  "T007": {
+    "case": "T007",
+    "cost": 19,
+    "selected": [
+      0,
+      1,
+      3
+    ],
+    "status": "feasible"
+  },
+  "T008": {
+    "case": "T008",
+    "cost": 44,
+    "selected": [
+      0,
+      1,
+      2
+    ],
+    "status": "feasible"
+  },
+  "T009": {
+    "case": "T009",
+    "cost": 20,
+    "selected": [
+      0,
+      3
+    ],
+    "status": "feasible"
+  },
+  "T010": {
+    "case": "T010",
+    "cost": 35,
+    "selected": [
+      0,
+      1
+    ],
+    "status": "feasible"
+  },
+  "T011": {
+    "case": "T011",
+    "cost": 67,
+    "selected": [
+      0,
+      1,
+      2,
+      5,
+      8
+    ],
+    "status": "feasible"
+  },
+  "T012": {
+    "case": "T012",
+    "cost": 44,
+    "selected": [
+      0,
+      2,
+      5,
+      7
+    ],
+    "status": "feasible"
+  },
+  "T013": {
+    "case": "T013",
+    "cost": 21,
+    "selected": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T014": {
+    "case": "T014",
+    "cost": 53,
+    "selected": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T015": {
+    "case": "T015",
+    "cost": 35,
+    "selected": [
+      0,
+      2,
+      7
+    ],
+    "status": "feasible"
+  },
+  "T016": {
+    "case": "T016",
+    "cost": 62,
+    "selected": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "status": "feasible"
+  },
+  "T017": {
+    "case": "T017",
+    "cost": 60,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "T018": {
+    "case": "T018",
+    "cost": 9,
+    "selected": [
+      3,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T019": {
+    "case": "T019",
+    "cost": 24,
+    "selected": [
+      1,
+      4,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T020": {
+    "case": "T020",
+    "cost": 50,
+    "selected": [
+      0,
+      1,
+      2,
+      4,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T021": {
+    "case": "T021",
+    "cost": 38,
+    "selected": [
+      0,
+      7,
+      8
+    ],
+    "status": "feasible"
+  },
+  "T022": {
+    "case": "T022",
+    "cost": 50,
+    "selected": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T023": {
+    "case": "T023",
+    "cost": 60,
+    "selected": [
+      0,
+      1,
+      2,
+      6,
+      7,
+      8
+    ],
+    "status": "feasible"
+  },
+  "T024": {
+    "case": "T024",
+    "cost": 17,
+    "selected": [
+      0,
+      6
+    ],
+    "status": "feasible"
+  },
+  "T025": {
+    "case": "T025",
+    "cost": 36,
+    "selected": [
+      0,
+      1,
+      3,
+      7,
+      9
+    ],
+    "status": "feasible"
+  },
+  "T026": {
+    "case": "T026",
+    "cost": 33,
+    "selected": [
+      0,
+      1,
+      2
+    ],
+    "status": "feasible"
+  },
+  "T027": {
+    "case": "T027",
+    "cost": 22,
+    "selected": [
+      0,
+      5,
+      8
+    ],
+    "status": "feasible"
+  },
+  "T028": {
+    "case": "T028",
+    "cost": 18,
+    "selected": [
+      0,
+      1,
+      4
+    ],
+    "status": "feasible"
+  },
+  "T029": {
+    "case": "T029",
+    "cost": 63,
+    "selected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "status": "feasible"
+  },
+  "T030": {
+    "case": "T030",
+    "cost": 22,
+    "selected": [
+      3,
+      4,
+      5
+    ],
+    "status": "feasible"
+  },
+  "T031": {
+    "case": "T031",
+    "cost": 53,
+    "selected": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "status": "feasible"
+  },
+  "T032": {
+    "case": "T032",
+    "cost": 46,
+    "selected": [
+      0,
+      1,
+      2
+    ],
+    "status": "feasible"
+  },
+  "T033": {
+    "case": "T033",
+    "cost": 8,
+    "selected": [
+      0
+    ],
+    "status": "feasible"
+  },
+  "T034": {
+    "case": "T034",
+    "cost": 53,
+    "selected": [
+      0,
+      1,
+      4,
+      7,
+      8,
+      9
+    ],
+    "status": "feasible"
+  },
+  "T035": {
+    "case": "T035",
+    "cost": 75,
+    "selected": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "status": "feasible"
+  },
+  "V000": {
+    "case": "V000",
+    "cost": 0,
+    "k": 1,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V001": {
+    "case": "V001",
+    "cost": 0,
+    "k": 2,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V002": {
+    "case": "V002",
+    "cost": 0,
+    "k": 3,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V003": {
+    "case": "V003",
+    "cost": 0,
+    "k": 1,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V004": {
+    "case": "V004",
+    "cost": 0,
+    "k": 2,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V005": {
+    "case": "V005",
+    "cost": 0,
+    "k": 3,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V006": {
+    "case": "V006",
+    "cost": 0,
+    "k": 1,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V007": {
+    "case": "V007",
+    "cost": 0,
+    "k": 2,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V008": {
+    "case": "V008",
+    "cost": 0,
+    "k": 3,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V009": {
+    "case": "V009",
+    "cost": 0,
+    "k": 1,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V010": {
+    "case": "V010",
+    "cost": 0,
+    "k": 2,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  },
+  "V011": {
+    "case": "V011",
+    "cost": 0,
+    "k": 3,
+    "schema": "vcm-certificate-1",
+    "status": "vacuous"
+  }
+}

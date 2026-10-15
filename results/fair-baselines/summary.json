@@ -1,0 +1,415 @@
+{
+  "methods": {
+    "compact-milp": {
+      "above_optimum": 0,
+      "certified": 390,
+      "completed": 390,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.060549999034265056,
+          "check_median_ms": 0.3500500024529174,
+          "classification_median_ms": 0.04275000173947774,
+          "compile_median_ms": 0.2334000018890947,
+          "completed": 30,
+          "input_median_ms": 0.10145000123884529,
+          "primal_median_ms": 1.7317499987257179,
+          "serialize_median_ms": 0.02649999805726111,
+          "total_median_ms": 3.0124000004434492,
+          "witness_median_ms": 0.5134000020916574
+        },
+        "Fan": {
+          "admission_median_ms": 0.041200000850949436,
+          "check_median_ms": 0.20190000213915482,
+          "classification_median_ms": 0.025300003471784294,
+          "compile_median_ms": 0.1262500009033829,
+          "completed": 36,
+          "input_median_ms": 0.09389999468112364,
+          "primal_median_ms": 1.18674999976065,
+          "serialize_median_ms": 0.018649996491149068,
+          "total_median_ms": 1.8768000009004027,
+          "witness_median_ms": 0.19080000129179098
+        },
+        "Infeasible": {
+          "admission_median_ms": 0.02175000190618448,
+          "check_median_ms": 0.07325000115088187,
+          "classification_median_ms": 0.015000001440057531,
+          "compile_median_ms": 0.05944999793427996,
+          "completed": 36,
+          "input_median_ms": 0.052050003432668746,
+          "primal_median_ms": 0.0006500013114418834,
+          "serialize_median_ms": 0.0071499998739454895,
+          "total_median_ms": 0.234950002777623,
+          "witness_median_ms": 0.00029999500839039683
+        },
+        "Layered": {
+          "admission_median_ms": 0.2710499975364655,
+          "check_median_ms": 2.018749997660052,
+          "classification_median_ms": 0.2815000007103663,
+          "compile_median_ms": 1.65624999863212,
+          "completed": 144,
+          "input_median_ms": 0.17940000179805793,
+          "primal_median_ms": 2.9289500016602688,
+          "serialize_median_ms": 0.03730000025825575,
+          "total_median_ms": 9.682449999672826,
+          "witness_median_ms": 1.8317499998374842
+        },
+        "Tiny": {
+          "admission_median_ms": 0.03789999755099416,
+          "check_median_ms": 0.17239999942830764,
+          "classification_median_ms": 0.023650001821806654,
+          "compile_median_ms": 0.10770000153570436,
+          "completed": 108,
+          "input_median_ms": 0.09270000009564683,
+          "primal_median_ms": 0.9632500004954636,
+          "serialize_median_ms": 0.01979999797185883,
+          "total_median_ms": 1.646799995796755,
+          "witness_median_ms": 0.1609999999345746
+        },
+        "Vacuous": {
+          "admission_median_ms": 0.01934999818331562,
+          "check_median_ms": 0.06129999746917747,
+          "classification_median_ms": 0.010050003766082227,
+          "compile_median_ms": 0.05304999649524689,
+          "completed": 36,
+          "input_median_ms": 0.0471500025014393,
+          "primal_median_ms": 0.0005999972927384079,
+          "serialize_median_ms": 0.005450001481221989,
+          "total_median_ms": 0.20704999769805,
+          "witness_median_ms": 0.0002499982656445354
+        }
+      },
+      "max_quality_ratio": 1.0
+    },
+    "cover-greedy": {
+      "above_optimum": 210,
+      "certified": 72,
+      "completed": 378,
+      "enumeration_limits": 12,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.050900001951958984,
+          "check_median_ms": 0.2542000001994893,
+          "classification_median_ms": 0.036749999708263204,
+          "compile_median_ms": 0.1845499973569531,
+          "completed": 18,
+          "input_median_ms": 0.09520000094198622,
+          "primal_median_ms": 1.855549999163486,
+          "serialize_median_ms": 0.012700002116616815,
+          "total_median_ms": 2.523599996493431,
+          "witness_median_ms": 0.0008499991963617504
+        },
+        "Fan": {
+          "admission_median_ms": 0.03465000190772116,
+          "check_median_ms": 0.1597500013303943,
+          "classification_median_ms": 0.023649998183827847,
+          "compile_median_ms": 0.12310000238358043,
+          "completed": 36,
+          "input_median_ms": 0.060549999034265056,
+          "primal_median_ms": 0.06224999742698856,
+          "serialize_median_ms": 0.006900001608300954,
+          "total_median_ms": 0.47975000052247196,
+          "witness_median_ms": 0.000500003807246685
+        },
+        "Infeasible": {
+          "admission_median_ms": 0.019800001609837636,
+          "check_median_ms": 0.07180000466178171,
+          "classification_median_ms": 0.014949997421354055,
+          "compile_median_ms": 0.058850000641541556,
+          "completed": 36,
+          "input_median_ms": 0.049250000301981345,
+          "primal_median_ms": 0.000600004568696022,
+          "serialize_median_ms": 0.006399997801054269,
+          "total_median_ms": 0.22544999956153333,
+          "witness_median_ms": 0.00029999500839039683
+        },
+        "Layered": {
+          "admission_median_ms": 0.2721999953791965,
+          "check_median_ms": 2.1127500003785826,
+          "classification_median_ms": 0.2756999965640716,
+          "compile_median_ms": 1.5206499992928002,
+          "completed": 144,
+          "input_median_ms": 0.16955000319285318,
+          "primal_median_ms": 0.46784999722149223,
+          "serialize_median_ms": 0.01059999704011716,
+          "total_median_ms": 5.103550000058021,
+          "witness_median_ms": 0.0006999980541877449
+        },
+        "Tiny": {
+          "admission_median_ms": 0.027850001060869545,
+          "check_median_ms": 0.12910000077681616,
+          "classification_median_ms": 0.02144999962183647,
+          "compile_median_ms": 0.09609999688109383,
+          "completed": 108,
+          "input_median_ms": 0.05360000068321824,
+          "primal_median_ms": 0.06959999882383272,
+          "serialize_median_ms": 0.006399997801054269,
+          "total_median_ms": 0.4058999984408729,
+          "witness_median_ms": 0.000500003807246685
+        },
+        "Vacuous": {
+          "admission_median_ms": 0.0184499986062292,
+          "check_median_ms": 0.05784999666502699,
+          "classification_median_ms": 0.009049999789567664,
+          "compile_median_ms": 0.047649999032728374,
+          "completed": 36,
+          "input_median_ms": 0.04444999649422243,
+          "primal_median_ms": 0.000500003807246685,
+          "serialize_median_ms": 0.004900000931229442,
+          "total_median_ms": 0.1891999963845592,
+          "witness_median_ms": 0.000200001522898674
+        }
+      },
+      "max_quality_ratio": 1.875
+    },
+    "dense-lp": {
+      "above_optimum": 0,
+      "certified": 390,
+      "completed": 390,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.0595499986957293,
+          "check_median_ms": 0.3415500032133423,
+          "classification_median_ms": 0.04229999831295572,
+          "compile_median_ms": 0.22884999998495914,
+          "completed": 30,
+          "input_median_ms": 0.10165000276174396,
+          "primal_median_ms": 1.9320499995956197,
+          "serialize_median_ms": 0.026749999960884452,
+          "total_median_ms": 3.2189000048674643,
+          "witness_median_ms": 0.5089499973109923
+        },
+        "Fan": {
+          "admission_median_ms": 0.041200000850949436,
+          "check_median_ms": 0.19610000163083896,
+          "classification_median_ms": 0.025749999622348696,
+          "compile_median_ms": 0.1293500026804395,
+          "completed": 36,
+          "input_median_ms": 0.09389999831910245,
+          "primal_median_ms": 1.4792999972996768,
+          "serialize_median_ms": 0.018549999367678538,
+          "total_median_ms": 2.1922500018263236,
+          "witness_median_ms": 0.1825499966798816
+        },
+        "Infeasible": {
+          "admission_median_ms": 0.021100004232721403,
+          "check_median_ms": 0.07109999933163635,
+          "classification_median_ms": 0.014449997252086177,
+          "compile_median_ms": 0.05810000220662914,
+          "completed": 36,
+          "input_median_ms": 0.048000001697801054,
+          "primal_median_ms": 0.0006999980541877449,
+          "serialize_median_ms": 0.0068499975895974785,
+          "total_median_ms": 0.234650000493275,
+          "witness_median_ms": 0.000200001522898674
+        },
+        "Layered": {
+          "admission_median_ms": 0.26634999812813476,
+          "check_median_ms": 2.2563999991689343,
+          "classification_median_ms": 0.3128499993181322,
+          "compile_median_ms": 1.613699994777562,
+          "completed": 144,
+          "input_median_ms": 0.20839999706367962,
+          "primal_median_ms": 10.22480000028736,
+          "serialize_median_ms": 0.04175000503892079,
+          "total_median_ms": 16.462849998788442,
+          "witness_median_ms": 1.786500000889646
+        },
+        "Tiny": {
+          "admission_median_ms": 0.04100000296602957,
+          "check_median_ms": 0.18069999714498408,
+          "classification_median_ms": 0.025049997930182144,
+          "compile_median_ms": 0.11250000170548446,
+          "completed": 108,
+          "input_median_ms": 0.10299999848939478,
+          "primal_median_ms": 1.4648500000475906,
+          "serialize_median_ms": 0.021400002879090607,
+          "total_median_ms": 2.1251500002108514,
+          "witness_median_ms": 0.16010000035748817
+        },
+        "Vacuous": {
+          "admission_median_ms": 0.02179999864893034,
+          "check_median_ms": 0.0668499997118488,
+          "classification_median_ms": 0.010200004908256233,
+          "compile_median_ms": 0.05765000241808593,
+          "completed": 36,
+          "input_median_ms": 0.053050000133225694,
+          "primal_median_ms": 0.0006999980541877449,
+          "serialize_median_ms": 0.006049998773960397,
+          "total_median_ms": 0.225349998800084,
+          "witness_median_ms": 0.00029999500839039683
+        }
+      },
+      "max_quality_ratio": 1.0
+    },
+    "explicit-milp": {
+      "above_optimum": 0,
+      "certified": 378,
+      "completed": 378,
+      "enumeration_limits": 12,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.04989999797544442,
+          "check_median_ms": 0.2771499966911506,
+          "classification_median_ms": 0.036699999327538535,
+          "compile_median_ms": 0.1796000033209566,
+          "completed": 18,
+          "input_median_ms": 0.1004999976430554,
+          "primal_median_ms": 2.7802500007965136,
+          "serialize_median_ms": 0.024500001018168405,
+          "total_median_ms": 3.8509000005433336,
+          "witness_median_ms": 0.3777999991143588
+        },
+        "Fan": {
+          "admission_median_ms": 0.041349998355144635,
+          "check_median_ms": 0.1980500019271858,
+          "classification_median_ms": 0.02635000055306591,
+          "compile_median_ms": 0.1327499994658865,
+          "completed": 36,
+          "input_median_ms": 0.09494999903836288,
+          "primal_median_ms": 1.0424999964016024,
+          "serialize_median_ms": 0.019049999536946416,
+          "total_median_ms": 1.7581499996595085,
+          "witness_median_ms": 0.20435000260476954
+        },
+        "Infeasible": {
+          "admission_median_ms": 0.020750001567648724,
+          "check_median_ms": 0.07440000263159163,
+          "classification_median_ms": 0.015549994714092463,
+          "compile_median_ms": 0.05980000423733145,
+          "completed": 36,
+          "input_median_ms": 0.05084999793325551,
+          "primal_median_ms": 0.0006999980541877449,
+          "serialize_median_ms": 0.0069499983510468155,
+          "total_median_ms": 0.23765000150888227,
+          "witness_median_ms": 0.000200001522898674
+        },
+        "Layered": {
+          "admission_median_ms": 0.27874999796040356,
+          "check_median_ms": 2.222899998741923,
+          "classification_median_ms": 0.3015000002051238,
+          "compile_median_ms": 1.6444000029878225,
+          "completed": 144,
+          "input_median_ms": 0.1885999990918208,
+          "primal_median_ms": 1.2701999985438306,
+          "serialize_median_ms": 0.038800000766059384,
+          "total_median_ms": 8.035149996430846,
+          "witness_median_ms": 1.8559000018285587
+        },
+        "Tiny": {
+          "admission_median_ms": 0.037549998523900285,
+          "check_median_ms": 0.17074999777833,
+          "classification_median_ms": 0.023349995899479836,
+          "compile_median_ms": 0.1050000028044451,
+          "completed": 108,
+          "input_median_ms": 0.09130000034929253,
+          "primal_median_ms": 0.7895000017015263,
+          "serialize_median_ms": 0.019750001229112968,
+          "total_median_ms": 1.4441999992413912,
+          "witness_median_ms": 0.1602000011189375
+        },
+        "Vacuous": {
+          "admission_median_ms": 0.01930000144056976,
+          "check_median_ms": 0.05904999852646142,
+          "classification_median_ms": 0.009250001312466338,
+          "compile_median_ms": 0.05079999755253084,
+          "completed": 36,
+          "input_median_ms": 0.045849999878555536,
+          "primal_median_ms": 0.0005999972927384079,
+          "serialize_median_ms": 0.005099998816149309,
+          "total_median_ms": 0.20090000180061907,
+          "witness_median_ms": 0.000200001522898674
+        }
+      },
+      "max_quality_ratio": 1.0
+    },
+    "sparse-lp": {
+      "above_optimum": 0,
+      "certified": 390,
+      "completed": 390,
+      "enumeration_limits": 0,
+      "families": {
+        "Choice": {
+          "admission_median_ms": 0.06985000072745606,
+          "check_median_ms": 0.36395000279298984,
+          "classification_median_ms": 0.04410000110510737,
+          "compile_median_ms": 0.2415000017208513,
+          "completed": 30,
+          "input_median_ms": 0.12194999726489186,
+          "primal_median_ms": 2.1774999986519106,
+          "serialize_median_ms": 0.030849998438498005,
+          "total_median_ms": 3.5865499994542915,
+          "witness_median_ms": 0.5216000026848633
+        },
+        "Fan": {
+          "admission_median_ms": 0.04380000245873816,
+          "check_median_ms": 0.19934999727411196,
+          "classification_median_ms": 0.02599999788799323,
+          "compile_median_ms": 0.13084999955026433,
+          "completed": 36,
+          "input_median_ms": 0.10214999929303303,
+          "primal_median_ms": 1.5601500017510261,
+          "serialize_median_ms": 0.01894999877549708,
+          "total_median_ms": 2.252449998195516,
+          "witness_median_ms": 0.18650000129127875
+        },
+        "Infeasible": {
+          "admission_median_ms": 0.022950000129640102,
+          "check_median_ms": 0.08289999823318794,
+          "classification_median_ms": 0.016599999071331695,
+          "compile_median_ms": 0.0667000022076536,
+          "completed": 36,
+          "input_median_ms": 0.05624999903375283,
+          "primal_median_ms": 0.000700005330145359,
+          "serialize_median_ms": 0.007700000423938036,
+          "total_median_ms": 0.25644999914220534,
+          "witness_median_ms": 0.00029999500839039683
+        },
+        "Layered": {
+          "admission_median_ms": 0.27425000007497147,
+          "check_median_ms": 2.14849999974831,
+          "classification_median_ms": 0.30920000062906183,
+          "compile_median_ms": 1.6811999994388316,
+          "completed": 144,
+          "input_median_ms": 0.21315000049071386,
+          "primal_median_ms": 4.5720500020252075,
+          "serialize_median_ms": 0.043000000005122274,
+          "total_median_ms": 12.015899999823887,
+          "witness_median_ms": 1.9197500005248003
+        },
+        "Tiny": {
+          "admission_median_ms": 0.042949999624397606,
+          "check_median_ms": 0.18754999473458156,
+          "classification_median_ms": 0.025600002118153498,
+          "compile_median_ms": 0.11805000031017698,
+          "completed": 108,
+          "input_median_ms": 0.10905000090133399,
+          "primal_median_ms": 1.637799996387912,
+          "serialize_median_ms": 0.02229999881819822,
+          "total_median_ms": 2.3271500031114556,
+          "witness_median_ms": 0.1642499992158264
+        },
+        "Vacuous": {
+          "admission_median_ms": 0.021699997887481004,
+          "check_median_ms": 0.06629999916185625,
+          "classification_median_ms": 0.010600000678095967,
+          "compile_median_ms": 0.057550001656636596,
+          "completed": 36,
+          "input_median_ms": 0.052649997087428346,
+          "primal_median_ms": 0.000600004568696022,
+          "serialize_median_ms": 0.006150003173388541,
+          "total_median_ms": 0.22214999989955686,
+          "witness_median_ms": 0.000200001522898674
+        }
+      },
+      "max_quality_ratio": 1.0
+    }
+  },
+  "models": 130,
+  "observation_state_cap": 32768,
+  "repetitions": 3,
+  "retained_models": 120,
+  "retained_suite_read_ms": 15.863199994782917,
+  "structured_models": 10
+}
