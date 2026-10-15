@@ -47,7 +47,7 @@ python -m pip install -r requirements-producer.txt
 
 `test.py`, `fuzz.py`, campaign production, and the exact-oracle tests require the producer dependencies because they call the solver. `run.py check`, certificate comparison, and `audit.py` are standard-library-only after their inputs exist. The final `python3 -S` command below demonstrates the checker-only path with site packages disabled.
 
-The Linux campaign launcher uses one worker, a 3 GiB address-space cap, and a 2700-second CPU cap. It requires the Unix `resource` module. The standard-library checker can be called directly on other hosts, but the campaign launchers are not Windows-compatible.
+The Linux launchers use one worker, a 3 GiB address-space cap, and a 2700-second CPU cap. `run.py` (including `check` and `compare`), `test.py`, `fuzz.py`, and `exhaustive.py` import the Unix `resource` module and apply that guard; these commands are not native-Windows-compatible even when they need no solver packages. The checker implementation in `src/checker.py`, `audit.py`, and `verify_fair.py` have no such launcher dependency.
 
 A current Ubuntu 24.04/Python 3.13.5 execution with the pinned libraries passes all 29 tests, regenerates the 120 certificates, and matches every non-runtime campaign field, 21 controls, all 13,720 exhaustive and 200 differential records, and all eight derived files. The campaign uses 7.906873 wall seconds, 7.904578 CPU seconds and 400,532 KiB peak process RSS. Actual current measurements and test/environment records are in `results/measurements/current-linux/`; the historical campaign remains unchanged.
 
@@ -69,7 +69,7 @@ python3 -B tests/prepared_dag_regression.py
 python3 -B tests/prepared_solver_regression.py
 ```
 
-Run from the repository root; each named output directory must be absent or empty:
+Run from the repository root with new, absent output directories. In particular, `exhaustive.py` refuses even an existing empty output directory:
 
 ```bash
 python3 test.py

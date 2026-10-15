@@ -65,7 +65,7 @@ python3 run.py pilot --out ...
 python3 run.py reproduce --out ...
 ```
 
-`exhaustive.py` uses only the repository's finite combinatorial logic and standard library. Once result directories exist, `run.py compare`, `audit.py`, and `run.py check` do not need the producer solver packages. The documented `python3 -S run.py check ...` invocation disables site packages and is the explicit checker-only test.
+`exhaustive.py` uses only the repository's finite combinatorial logic and standard library, but its launcher imports Unix `resource`. Once result directories exist, `run.py compare`, `audit.py`, and `run.py check` do not need the producer solver packages. All `run.py` commands nevertheless import `resource` and install the Linux limits, so `check` and `compare` are not portable Windows commands. The documented `python3 -S run.py check ...` invocation disables site packages on Linux; it tests independence from solver packages, not operating-system portability. The checker implementation, `audit.py`, and `verify_fair.py` do not import the Linux guard.
 
 ## Reproduction meanings
 

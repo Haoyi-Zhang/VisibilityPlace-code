@@ -50,9 +50,9 @@ python -m pip install --upgrade 'pip==25.1.1'
 python -m pip install -r requirements-producer.txt
 ```
 
-`test.py`, `fuzz.py`, `pilot`, and `reproduce` call the producer and need NumPy/SciPy/NetworkX. `run.py check`, `compare`, and `audit.py` are standard-library-only once results exist.
+`test.py`, `fuzz.py`, `pilot`, and `reproduce` call the producer and need NumPy/SciPy/NetworkX. `run.py check`, `run.py compare`, and `audit.py` need no solver packages once results exist. However, all `run.py` commands still import Unix `resource` and apply the Linux guard, as do `test.py`, `fuzz.py`, and `exhaustive.py`. Solver-free does not make those launchers native-Windows-compatible.
 
-Every output directory named below must be absent or empty:
+Use new, absent output directories for the commands below. `exhaustive.py` rejects an existing directory even when it is empty:
 
 ```bash
 python3 test.py
